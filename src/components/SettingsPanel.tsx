@@ -1,7 +1,8 @@
 "use client";
 
 import { useTheme } from "./ThemeProvider";
-import { Sun, Moon, X, Palette } from "lucide-react";
+import { Sun, Moon, X } from "lucide-react";
+import { VscSymbolColor } from "react-icons/vsc";
 import { useState, useCallback, useEffect } from "react";
 
 export default function SettingsPanel() {
@@ -41,7 +42,7 @@ export default function SettingsPanel() {
                    border border-white/10"
                 aria-label="Opciones"
             >
-                <Palette className="w-5 h-5" />
+                <VscSymbolColor className="w-6 h-6" />
             </button>
 
             {/* Backdrop + Panel */}
