@@ -118,7 +118,7 @@ export default function SettingsPanel() {
                                         key={key}
                                         onClick={() => setColorKey(key)}
                                         className={`w-10 h-10 rounded-full transition-all duration-200 ${colorKey === key
-                                            ? "ring-2 ring-offset-2 ring-offset-surface scale-110"
+                                            ? "ring-2 ring-white ring-offset-2 ring-offset-surface scale-110 shadow-lg"
                                             : "hover:scale-105"
                                             }`}
                                         style={{

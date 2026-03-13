@@ -97,8 +97,12 @@ export default function CalculatorCard({ rates: initialRates }: CalculatorCardPr
     // Manejar input superior (USD/EUR)
     const handleTopChange = useCallback(
         (rawValue: string) => {
-            // Quitar comas del formato
-            const clean = unformatNumber(rawValue).replace(/[^0-9.]/g, "");
+            // Quitar comas del formato y limpiar caracteres no numéricos
+            let clean = unformatNumber(rawValue).replace(/[^0-9.]/g, "");
+            
+            // Eliminar ceros a la izquierda antes de un dígito (ej. "01" → "1")
+            clean = clean.replace(/^0+(\d)/, "$1");
+
             const dotCount = (clean.match(/\./g) || []).length;
             if (dotCount > 1) return;
 
@@ -121,7 +125,11 @@ export default function CalculatorCard({ rates: initialRates }: CalculatorCardPr
     // Manejar input inferior (Bs)
     const handleBsChange = useCallback(
         (rawValue: string) => {
-            const clean = unformatNumber(rawValue).replace(/[^0-9.]/g, "");
+            let clean = unformatNumber(rawValue).replace(/[^0-9.]/g, "");
+            
+            // Eliminar ceros a la izquierda antes de un dígito
+            clean = clean.replace(/^0+(\d)/, "$1");
+
             const dotCount = (clean.match(/\./g) || []).length;
             if (dotCount > 1) return;
 
@@ -237,12 +245,12 @@ export default function CalculatorCard({ rates: initialRates }: CalculatorCardPr
                 {/* Top Input (USD / EUR) */}
                 <div className="flex flex-col gap-1 z-10">
                     <label
-                        className="text-xs font-semibold opacity-70 uppercase tracking-wider"
+                        className="text-[10px] font-bold opacity-60 uppercase tracking-widest ml-1"
                         htmlFor="top-input"
                     >
                         Tengo ({selectedRate === "CUSTOM" ? "Divisa" : selectedRate})
                     </label>
-                    <div className="flex items-center gap-2 bg-on-primary/10 rounded-2xl px-4 py-3">
+                    <div className="flex items-center gap-2 bg-black/15 rounded-2xl px-4 py-3 border border-white/10">
                         <span className="text-xl font-bold opacity-80">{originSymbol}</span>
                         <input
                             id="top-input"
@@ -270,8 +278,8 @@ export default function CalculatorCard({ rates: initialRates }: CalculatorCardPr
                 </div>
 
                 {/* Rate label (sin swap) */}
-                <div className="flex items-center justify-center z-10 px-1">
-                    <span className="text-[11px] font-medium opacity-60">
+                <div className="flex items-center justify-center z-10 px-1 py-0.5">
+                    <span className="text-xs italic font-medium opacity-50">
                         1 {selectedRate === "CUSTOM" ? "Divisa" : selectedRate} = Bs{" "}
                         {formatNumber(activeRate.toFixed(2))}
                     </span>
@@ -280,12 +288,12 @@ export default function CalculatorCard({ rates: initialRates }: CalculatorCardPr
                 {/* Bs Input (Abajo) */}
                 <div className="flex flex-col gap-1 z-10">
                     <label
-                        className="text-xs font-semibold opacity-70 uppercase tracking-wider"
+                        className="text-[10px] font-bold opacity-60 uppercase tracking-widest ml-1"
                         htmlFor="bs-input"
                     >
                         Recibo (Bs) — {activeLabel}
                     </label>
-                    <div className="flex items-center gap-2 bg-on-primary/10 rounded-2xl px-4 py-3">
+                    <div className="flex items-center gap-2 bg-black/15 rounded-2xl px-4 py-3 border border-white/10">
                         <span className="text-xl font-bold opacity-80">Bs</span>
                         <input
                             id="bs-input"
