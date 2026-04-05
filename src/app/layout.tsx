@@ -14,7 +14,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://vex.vercel.app";
+const siteUrl = "https://milechuga.vercel.app";
 const siteTitle = "Mi Lechuga - Tasa $ de Venezuela";
 const siteDescription =
   "Consulta las tasas del dólar BCV, euro y USDT en tiempo real. Calculadora de cambio rápida, sin anuncios y de código abierto.";

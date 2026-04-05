@@ -28,8 +28,8 @@ export default function SplashScreen() {
             {/* Logo girando contra las manecillas del reloj */}
             <div className="animate-spin-ccw">
                 <Image
-                    src="/icons/android-chrome-192x192.png"
-                    alt="Vex logo"
+                    src="/icons/splash-80x80.png"
+                    alt="Mi Lechuga logo"
                     width={80}
                     height={80}
                     className="rounded-3xl"
@@ -37,7 +37,7 @@ export default function SplashScreen() {
                 />
             </div>
             <h1 className="mt-5 text-2xl font-bold font-display text-foreground animate-[fadeIn_0.5s_ease_0.3s_both]">
-                MisLechugas
+                Mi Lechuga
             </h1>
         </div>
     );

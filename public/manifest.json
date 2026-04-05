@@ -1,10 +1,10 @@
 {
-  "name": "Vex - Tasa libre de Venezuela",
-  "short_name": "Vex",
-  "description": "Calculadora de tasas de cambio — Venezuela",
+  "name": "Mi Lechuga - Tasa 🥬 Venezuela",
+  "short_name": "Mi Lechuga",
+  "description": "Tasa 🥬 en Venezuela",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1C1B1F",
+  "background_color": "#1C1B1C",
   "theme_color": "#82E03A",
   "orientation": "portrait",
   "icons": [
