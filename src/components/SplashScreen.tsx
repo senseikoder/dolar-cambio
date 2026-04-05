@@ -37,11 +37,8 @@ export default function SplashScreen() {
                 />
             </div>
             <h1 className="mt-5 text-2xl font-bold font-display text-foreground animate-[fadeIn_0.5s_ease_0.3s_both]">
-                Vex
+                MisLechugas
             </h1>
-            <p className="mt-1 text-xs text-foreground/40 tracking-widest uppercase animate-[fadeIn_0.5s_ease_0.5s_both]">
-                Tasa libre de Venezuela
-            </p>
         </div>
     );
 }

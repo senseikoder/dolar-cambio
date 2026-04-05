@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import SettingsPanel from "@/components/SettingsPanel";
-import CalendarPanel from "@/components/CalendarPanel";
+// import CalendarPanel from "@/components/CalendarPanel";
 import SplashScreen from "@/components/SplashScreen";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 import { Analytics } from "@vercel/analytics/react";
@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 const siteUrl = "https://vex.vercel.app";
-const siteTitle = "Vex - Tasa libre de Venezuela";
+const siteTitle = "Mi Lechuga - Tasa $ de Venezuela";
 const siteDescription =
   "Consulta las tasas del dólar BCV, euro y USDT en tiempo real. Calculadora de cambio rápida, sin anuncios y de código abierto.";
 
@@ -33,24 +33,24 @@ export const metadata: Metadata = {
     "bolívares",
     "cambio dólar",
     "dólar paralelo",
-    "Vex",
+    "Mi Lechuga",
     "calculadora cambio",
   ],
-  authors: [{ name: "Vex", url: siteUrl }],
-  creator: "Vex",
+  authors: [{ name: "Mi Lechuga", url: siteUrl }],
+  creator: "Mi Lechuga",
   openGraph: {
     type: "website",
     locale: "es_VE",
     url: siteUrl,
     title: siteTitle,
     description: siteDescription,
-    siteName: "Vex",
+    siteName: "Mi Lechuga",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Vex — Tasas de cambio en Venezuela",
+        alt: "Mi Lechuga — Tasas de cambio en Venezuela",
       },
     ],
   },
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Vex",
+    title: "Mi Lechuga",
   },
 };
 
@@ -99,7 +99,7 @@ export default function RootLayout({
           <SplashScreen />
           <ServiceWorkerRegistration />
           {children}
-          <CalendarPanel />
+          {/* <CalendarPanel /> */}
           <SettingsPanel />
           <Analytics />
         </ThemeProvider>

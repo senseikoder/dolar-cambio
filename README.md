@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="public/icons/android-chrome-512x512.png" alt="Vex logo" width="140" />
+  <img src="public/icons/android-chrome-512x512.png" alt="Mis Lechugas logo" width="140" />
 </p>
 
-<h1 align="center">Vex — Tasa libre de Venezuela</h1>
+<h1 align="center">Mis Lechugas — Tasa libre de Venezuela</h1>
 
 <p align="center">
   Consulta las tasas del dólar, euro y USDT en tiempo real.<br/>
@@ -17,9 +17,9 @@
 
 ---
 
-## ¿Qué es Vex?
+## ¿Qué es Mis Lechugas?
 
-**Vex** es una aplicación web gratuita que te permite consultar al instante las principales tasas de cambio en Venezuela:
+**Mis Lechugas** es una aplicación web gratuita que te permite consultar al instante las principales tasas de cambio en Venezuela:
 
 - 💵 **Dólar BCV** — Tasa oficial del Banco Central de Venezuela
 - 💶 **Euro BCV** — Tasa oficial del euro
