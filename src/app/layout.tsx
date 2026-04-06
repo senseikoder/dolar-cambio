@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import SettingsPanel from "@/components/SettingsPanel";
-// import CalendarPanel from "@/components/CalendarPanel";
+import CalendarPanel from "@/components/CalendarPanel";
 import SplashScreen from "@/components/SplashScreen";
 import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 import { Analytics } from "@vercel/analytics/react";
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Mi Lechuga",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Mi Lechuga — Tasas de cambio en Venezuela",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
   },
   icons: {
     icon: [
@@ -99,7 +99,7 @@ export default function RootLayout({
           <SplashScreen />
           <ServiceWorkerRegistration />
           {children}
-          {/* <CalendarPanel /> */}
+          <CalendarPanel />
           <SettingsPanel />
           <Analytics />
         </ThemeProvider>
